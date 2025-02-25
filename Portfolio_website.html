@@ -6,7 +6,7 @@
         <meta chrset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <title>Craig Irwin</title>
-        <link rel="stylesheet" type="text/css" href="portflio_css.css">
+        <link rel="stylesheet" type="text/css" href="c:\Users\irwin\Documents\MyTechProjects\Portfolio\portflio_css.css">
     </head>
 
     <!----/HEAD---->
@@ -20,7 +20,6 @@
             <a class="active" href="#Home">Home</a>
             <a href="#About">About</a>
             <a href="#My_Work">My Work</a>
-            <a href="#Contact">Contact</a>
         </div>
         <!----/NAVBAR------>
 
@@ -31,7 +30,7 @@
         <!------BACKGROUND VIDEO------>
         <div id="Home">
             <video autoplay muted loop id="Rebel_Alliance">
-                <source src:"c:\Users\irwin\OneDrive\Documents\GitHub\Tech-Academy-Projects\github.io\Videos\68978-529861058_tiny.mp4" type="video/mp4">
+                <source src="c:\Users\irwin\Documents\MyTechProjects\Portfolio\Videos\68978-529861058_tiny.mp4" type="video/mp4">
            <!--DISPLAY IF VIDEO DOESNT WORK-->
            Rebel Alliance Flag
             </video>
@@ -53,21 +52,74 @@
             </strong>
         </div>
 
+        <!----SLIDESHOW---->
+        <div id="Slideshow">
+            <div id="Slideshow_Background"> 
+                <div id="Slideshow_Container">
+                    <!--Slide 1-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="c:\Users\irwin\Documents\MyTechProjects\Portfolio\Pictures\IMG_6926.jpg" alt="Picture of yourself">
+                        <div class="text">I'm available to assist you on your project!<br>During this course<br>I've learnt....</div>
+                    </div>
+                    <!--Slide 2-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="c:\Users\irwin\Documents\MyTechProjects\Portfolio\Pictures\icons8-javascript-240.png" alt="HTML, CSS, and JS logos"> 
+                        <div class="text">JavaScript</div>
+                    </div>
+                    <!--Slide 3-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="c:\Users\irwin\Documents\MyTechProjects\Portfolio\Pictures\icons8-bootstrap-logo-480.png" alt="Python logo">
+                        <div class="text">Bootstrap</div>
+                    </div>
+                    <!--Slide 4-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="c:\Users\irwin\Documents\MyTechProjects\Portfolio\Pictures\icons8-css-logo-240.png" alt="C# logo">
+                        <div class="text">CSS</div>
+                    </div>
+                    <!--Slide 5-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="c:\Users\irwin\Documents\MyTechProjects\Portfolio\Pictures\icons8-html-5-240.png" alt="SQL logo"> 
+                        <div class="text">HTML</div>
+                    </div>
+                    <!--Slide 6-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="c:\Users\irwin\Documents\MyTechProjects\Portfolio\Pictures\ai-generated-8155552_640.jpg" alt="Replace with a picture of your choosing"> 
+                        <div class="text"><a class="white-text contact" onclick="openForm()">Among many other aspects<br>Feel free to contact me!</a></div> 
+                    </div>
+                    <!-- Previous and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> 
+
+                <!-- Slideshow dots  -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+                </div>
+            </div>
+        </div>
+
+
         <!----ABOUT---->
         <div class="row" id="About">
             <!---LEFT COLUMN--->
             <div class="Column_2">
-                <img src="https://github.com/irwinc27/irwinc27.github.io/blob/main/Pictures/coding-1841550_1280.jpg?raw=true" alt="Coding_img not found">
+                <img src="c:\Users\irwin\Documents\MyTechProjects\Portfolio\Pictures\coding-1841550_1280.jpg" alt="Coding_img not found">
             </div>
             <!---RIGHT COLUMN--->   
             <div class="Column_1">
                 <h1>About</h1>
                 <p>
                     <br>I am currently studying software and program design through<a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a> 
-                    <br>
-                    <br>I was looking for a way to further my knowledge and expand into different areas of IT after already having worked in the more computer components area.
-                    <br>
+                    <br>I was looking for a way to further my knowledge and expand into different areas of IT after already having worked in a more computer components area.
                     <br>My studying and coding is fit and worked around spending time with my wife whether thats at home or on holidays.
+                    <br>There is much more I can learn and develop, which is what I have found on this course.
+                    <br>If you are eager, then there is always something more to learn.
                 </p>
             </div>
        </div>
@@ -85,29 +137,30 @@
              </div>
              <!--RIGHT COLUMN--->
              <div class="Column_2">
-                <a href="https://github.com/the-tech-academy" target="_blank"><img src="https://github.com/irwinc27/irwinc27.github.io/blob/main/Pictures/github-mark-white.png?raw=true" alt="GitHub Logo"></a>
+                <a href="https://github.com/the-tech-academy" target="_blank"><img src="c:\Users\irwin\Documents\MyTechProjects\Portfolio\Pictures\github-mark-white.png" alt="GitHub Logo"></a>
             </div>
         </div>
 
         <!---CONTACT--->
-        <div class="Row" id="Contact">
-            <!---CONTACT PIC LEFT--->
-            <div class="Column_2 Column_tall">
-                <img src="https://github.com/irwinc27/irwinc27.github.io/blob/main/Pictures/computer-2564367_1280.jpg?raw=true" alt="Computer_img not found">
-            </div>
-            <!---CONTACT LEFT COLUMN--->
-            <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
-                <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                    <label>Name:</label>
-                        <input type="text" placeholder="Name">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Email">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Message">
-                        <input type="submit" value="SUBMIT">
-                </form>
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                 <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                     <h1>Contact</h1>
+
+            <label for="Name"><b>Name</b></label>
+            <input type="text" placeholder="Enter Name" name="Name" required>
+            <label for="Phone"><b>Phone</b></label>
+            <input type="text" placeholder="Enter Phone Number" name="Phone" required>
+            <label for="Email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="Email" required>
+            <label for="Message"><b>Message</b></label>
+            <input type="text" placeholder="Enter Message" name="Message">
+
+
+            <button type="submit" class="btn">Submit</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
             </div>
         </div>
 
@@ -118,6 +171,7 @@
                 <br>
             </p>
         </footer>
+        <script src="c:\Users\irwin\Documents\MyTechProjects\Portfolio\portfolio_js.js"></script>
     </body>
 </html>
 

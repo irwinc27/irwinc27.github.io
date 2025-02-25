@@ -1,23 +1,23 @@
 /*-------GENERAL STYLES--------*/
 body {
-    margin:0%
+    margin:0% /*Enasures site displays to edge of the screen*/
 }
 
 /*------H1 ELEMENTS------*/
 h1 {
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: underline;
+    text-transform: uppercase; /*All H1 elements are capitalized*/
+    text-align: center; /*the text is centered*/
+    text-decoration: underline; /*unlines the text*/
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: 2%;
+    margin-top: 2%; /*adds a margin*/
     color: #fff;
 }
 
 /*H1 HOVER EFFECT*/
 h1:hover {
-    filter: drop-shadow(5%);
-    transform: scale(1.2);
-    transition: transform 1s;
+    filter: drop-shadow(5%); /*adds a drop shaow*/
+    transform: scale(1.2); /*increases the size when hovererd ove by 1:2 scale*/
+    transition: transform 1s; /*transformation lasts 1s*/
 }
 
 /*--PORTFOLIO TEXT--*/
@@ -43,12 +43,12 @@ p {
 
 /*--ANCHOR ELEMENTS--*/
 a {
-    color: blue;
+    color: blue; /*ensures any links are coloured blue*/
 }
 
 /*--QUOTATION ELEMENTS--*/
 q {
-    font-style: italic;
+    font-style: italic; /*makes the quotaion italic*/
     font-size: 40px;
     color:deeppink;
 }
@@ -56,7 +56,7 @@ q {
 
 /*--IMAGE ELEMENTS--*/
 img {
-    border-radius: 5px;
+    border-radius: 5px; /*slightly rounds the corners of element*/
     max-width: auto;
     height:340px;
     display: block;
@@ -66,8 +66,8 @@ img {
 
 /*--IMAGE HOVER EFFECTS--*/
 img:hover {
-    filter:grayscale(10%);
-    transition: transform 1.5s;
+    filter:grayscale(10%); /*filters some of image when hovered over*/
+    transition: transform 1.5s; /*effect takes 1.5s*/
     transform: scale(1.1);
    
 }
@@ -109,7 +109,7 @@ footer p {
 
 /***NAVBAR LINKS***/
 .Navbar a {
-    float: left;
+    float: left; /*ensures navbar links are to the left*/
     display: block;
     color:#fff;
     text-decoration: none;
@@ -119,11 +119,11 @@ footer p {
     text-align: center;
     position: relative;
     -webkit-animation: moveNavText 5.75s;
-    animation: moveNavText 5.75s;
+    animation: moveNavText 5.75s; /*animation lasts 5.75s*/
 }
 
 @keyframes moveNavText {
-    from {top: -100vw;}
+    from {top: -100vw;} /*Navbar drops from top of screen*/
     to {top: 0vw;}
 }
 
@@ -149,11 +149,11 @@ footer p {
 
 /***VIDEO STYLING***/
 #Rebel_Alliance {
-    position:fixed; 
+    position:fixed; /*fixes video to page */
     right: 0;
     bottom: 0;
-    z-index:-1;
-    min-width: 100%;
+    z-index:-1; /*places video behind other elements on screen*/
+    min-width: 100%; /*ensures it covers width of page*/
 }
 
 @media screen and (max-width: 576px) {
@@ -168,9 +168,9 @@ footer p {
     color: black;
     width: 100%;
     padding: 20%;
-    position: relative;
+    position: relative; /*sets the text to relative to its normal position*/
     -webkit-animation: moveVideoText 5.75s;
-    animation: moveVideoText 5.75s;
+    animation: moveVideoText 5.75s; /*annimation lasts 5.75s*/
 }
 
 @keyframes moveVideoText {
@@ -178,9 +178,122 @@ footer p {
     to {top: 0vw;} 
 }
 
-/***TABLE STYLING***/
+/***** Slideshow Styling *****/
+#Slideshow_Background {
+    background: rgba(255, 255, 255, 0.35); /* This creates a slightly transparent white background that's palced over the video in the background */    
+}
+
+.mySlides{
+    display: none; /* This prevents the images from being displayed, we will use JS to display these */
+}
+
+/* Slideshow container*/
+#Slideshow_Container {
+    width: 39.5vw; 
+    height: auto; 
+    padding-top: 4%; 
+    position: relative; 
+    margin:auto; 
+   
+}
+
+/* Remove the underline from the previous and next button on slideshow */
+#Slideshow_Container a {
+    text-decoration: none;
+}
+
+/* Images for slideshow */
+.Slideshow_Images {
+    vertical-align: middle; /* This centers the images in the slideshow container */
+    height: auto; /* Adjusts heignt of images in case they are different sizes */
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75); 
+    width: 100%; /* The width of images is automatically adjusted */
+}
+
+/* Next and previous buttons */
+.Previous, .Next {
+    cursor: pointer; /* Changes the mouse to a pointer when the buttons are selected */
+    position: absolute;
+    top: 50%; /* This moves the buttons up in the slideshow container */
+    width: auto; 
+    padding: 2vw; /* Adds padding equal to 2% of viewport width */
+    color: darkgray; 
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3px 3px 0; 
+    user-select: none; /* This property makes it so that the user can't highlight text */
+    transition: 0.6s ease; 
+}
+
+/* Positioning the next button */
+.Next {
+    right: 0; /* This moves the next button to the right side of the slideshow container */
+    border-radius: 3px 0 0 3px; 
+}
+
+/* Hover effect on slide show buttons */
+.Previous:hover, .Next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Makes the background of the arrows a transparent gray color */
+    color: white; /* Makes the arrows white when hovered over */
+}
+
+/* Slideshow text */
+.text {
+    color: white; 
+    padding: 1vw;
+    position: absolute; /* This ensures the text is positioned within the image */
+    bottom: 0; /* This sets the text at the bottom of the image */
+    width: 100%; 
+    text-align: center; /* The text is centered within the image */
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw; /* This gives spacing between the letters */
+    font-size: 1.5vw; 
+    background-color: rgba(0, 0, 0, 0.75); 
+    font-weight: bold;
+    border-radius: 0px 0px 7px 7px; 
+}
+
+/* Styling of the dots under the slideshow */
+.dot {
+    cursor: pointer; /* The cursor changes to pointer when hovered over the dots */
+    height: 1vw; /* The dots are sized relative to the viewport width */
+    width: 1vw;
+    margin: .25vw; 
+    background-color: white; 
+    border-radius: 50%; /* Rounds all corners to make them dots */
+    display: inline-block; /* Puts the dots inline */
+    transition: background-color 0.6s ease; /* When clicked on the dots transition to a different color when clicked or hovered over (the affect is defined below) */
+    z-index: 1; /* This ensures the dots will be displayed above any other elements */
+}
+
+/* Hover effect for slideshow dots */
+.active, .dot:hover {
+    background-color: black; 
+}
+
+/* Fading animation for slideshow */
+.fade {
+    animation-name: fade; 
+    animation-duration: 1.5s; /* The animation lasts 1.5s */
+    -webkit-animation-name: fade; 
+    -webkit-animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4;} /* Image starts transparent */
+    to {opacity: 1;} /* Image ends opaque */
+}
+
+@keyframes fade {
+    from {opacity: .4;} /* Image starts transparent */
+    to {opacity: 1;} /* Image ends opaque */
+}
+/***** End Slideshow Styling *****/
+
+
+/***Table Stylings***/
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /*Creates a box with a border to place text*/
     box-shadow: inset;
 }
 
@@ -190,7 +303,7 @@ footer p {
     padding: 10px;
     padding-top: 2%;
     height:400px;
-    background-color: darkmagenta;
+    background-color: darkmagenta; /*Sets colour of left column*/
 }
 
 @media screen and (max-width: 576px) {
@@ -214,51 +327,115 @@ footer p {
 }
 
 .Row:after {
-    content: "";
+    content: ""; /*Leaving this blank allows the footer to be diplayed*/
     display: table;
-    clear: both;
+    clear: both; /*Clears elements from floating on left or right of other elements*/
 }
 
-/****CONTACT FORM STYLING****/
-input[type=text] {
-    width: 100%;
-    padding: 12px;
-    background-color: #fff;
-    color:black;
-    border: 5px purple;
-    border-radius: 15px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 15px;
-    resize: vertical;
+/*****End of Table Styling*****/
+
+
+/***** Contact Form Styling *****/
+/* Button used to open the contact form - fixed at the bottom of the page */
+.Pop_Up_Button {
+    position: fixed; 
+    bottom: 1.75vw; 
+    right: 1.75vw; 
+    width: 20vw; 
+    padding: 3;
+    background-color: plum; 
+    color: white;
+    border: solid black; /* This makes a solid black border around the button */
+    border-radius: 25px;
+    cursor: pointer; /* This changes the cursor when hovered over the button to a pointer */
+    -webkit-animation: movePopup 5s; 
+    animation: movePopup 5s; /* Animation is for 5s */
+}
+
+/* movePopup animation moves the button from off the right side of the screen to its fixed location on the viewport */
+@keyframes movePopup {
+    from {right: -40vw;} 
+    to {right: 1.75vw;}
+}
+
+@-webkit-keyframes movePopup {
+    from {right: -40vw;} 
+    to {right: 1.75vw;}
+}
+
+/* Styling for the contact form */
+.form-popup {
+    z-index: 8; /* This ensures the contact form shows above all other elements on the page */
+    display: none; 
+    position: fixed; 
+    bottom: .5vw; 
+    right: .5vw; 
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+
+/* Form styling */
+.form-container {
+    max-width: 49vw; /* Makes container 49% of the viewport width */
+    padding: 1vw; 
+    border-radius: 25px;
+    background-color: white; 
+}
+
+/* Input fields */
+.form-container input[type=text] {
+    width: 100%; /* Completely fills the width of the form-container */
+    padding: .93vw; 
+    margin: .6vw 0 .6vw 0; 
+    border: none; /* Removes the border from the input boxes */
+    border-radius: 25px;
+    background: plum; 
+    font-size: 1vw; 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-input[type=text]:hover {
-    box-shadow: 0 0 5px magenta inset;
+/* General styling for all buttons */
+button {
+    font-family: "Trebuchet MS", Optima;
+    letter-spacing: .3vw; /* Adds spacing between the letters */
+    font-size: 1.5vw; 
+    font-weight: bold; 
+    padding: 1.5vw; 
+    cursor: pointer; /* Changes the cursor to pointer over button elements */
+    width: 100%; 
+    height: auto; /* Allows height to be resized depending on the content showing */
 }
 
-/***HOVER EFFECT SUBMIT BUTTON***/
-input[type=submit]:hover {
-    background-color: purple;
-    color:#fff;
-    transform: scale(1.2);
-    transition: transform.1s;
-    text-decoration: double;
-    border-radius: 8px;
-
+/* Hover effect for contact and submit buttons */
+button:hover, .form-container .btn:hover {
+    color: black; 
+    background-color: plum; 
+    transition-duration: 1s; /* This makes the transition last 1s */
+    -webkit-transition-duration: 1s; 
+    border-color: silver; /*Makes border silver when hovered over*/
 }
 
-/***FORM ELEMENT***/
-form {
-    border-radius: 10px;
-    background-color:blueviolet;
-    padding: 10px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/* Submit button */
+.form-container .btn {
+    background-color: purple; 
+    color: white;
+    border-color: black;
+    border-radius: 25px;
+    margin-bottom: 1vh;
 }
 
-form [type=submit] {
-    background-color:darkmagenta;
-    color:black;
-    border-radius: 4px;
+/* Close button */
+.form-container .cancel {
+    background-color: rgb(175, 99, 162);
+    color:white;
+    border-color: gray;
 }
+
+/* Styling for close button on hover */
+.form-container .cancel:hover {
+    color: black;
+    background-color: darkred;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: black;
+}
+
